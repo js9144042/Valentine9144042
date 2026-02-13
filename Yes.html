@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>She Said Yes!</title>
+
+<style>
+body {
+    background: linear-gradient(to top, #ffd6ec, #ffb3d9);
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-top: 40px;
+    color: #ff1493;
+    font-size: 9vw;
+}
+
+img {
+    width: 70%;
+    max-width: 350px;
+    margin-top: 20px;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -100px;
+    width: 40px;
+    height: 60px;
+    border-radius: 50%;
+    animation: float 6s linear infinite;
+}
+
+@keyframes float {
+    from { transform: translateY(0); }
+    to { transform: translateY(-120vh); }
+}
+</style>
+</head>
+
+<body>
+
+<h1>Yayyyy! 💖🎉</h1>
+
+<img src="https://media1.tenor.com/m/PbbHDS_y66QAAAAC/happy-birthday.gif">
+
+<script>
+for (let i = 0; i < 20; i++) {
+    let balloon = document.createElement("div");
+    balloon.className = "balloon";
+    balloon.style.left = Math.random() * 100 + "vw";
+    balloon.style.animationDuration = (4 + Math.random() * 3) + "s";
+    balloon.style.backgroundColor = "hsl(" + Math.random() * 360 + ", 100%, 75%)";
+    document.body.appendChild(balloon);
+}
+</script>
+
+</body>
+</html>
